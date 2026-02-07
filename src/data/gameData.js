@@ -46,13 +46,21 @@ export const gameData = {
       flyblades: {
         label: "Flyblades",
         items: [
+          { id: "wep-precklies", name: "Precklies" },
+          { id: "wep-skilter", name: "Skílter" },
+          { id: "wep-thrice-spurns", name: "Thrice Spurns" },
+        ],
+      },
+      greatswords: {
+        label: "Greatswords",
+        items: [
           { id: "wep-needleseye", name: "Needleseye" },
           { id: "wep-purity", name: "Purity" },
           { id: "wep-the-paragon", name: "The Paragon" },
         ],
       },
-      greatswords: {
-        label: "Greatswords",
+      longBlades: {
+        label: "Long Blades",
         items: [
           { id: "wep-dewelion", name: "Dewelion" },
           { id: "wep-igne-mora", name: "Igne Mora" },
@@ -66,16 +74,18 @@ export const gameData = {
           { id: "wep-wulder", name: "Wulder" },
         ],
       },
-      longBlades: {
-        label: "Long Blades",
+      magick: {
+        label: "Magick",
         items: [
+          { id: "wep-esthelle", name: "Esthelle" },
           { id: "wep-gwylen", name: "Gwylen" },
+          { id: "wep-odiac", name: "Odiac" },
           { id: "wep-the-alder", name: "The Alder" },
           { id: "wep-the-erstroot", name: "The Erstroot" },
         ],
       },
-      magick: {
-        label: "Magick",
+      polearms: {
+        label: "Polearms",
         items: [
           { id: "wep-duhk-halic", name: "Duhk Halic" },
           { id: "wep-gathannan", name: "Gathannan" },
@@ -83,33 +93,23 @@ export const gameData = {
           { id: "wep-vasp-iv", name: "Vasp-IV" },
         ],
       },
-      polearms: {
-        label: "Polearms",
-        items: [
-          { id: "wep-bog-myrtle", name: "Bog & Myrtle" },
-          { id: "wep-oryn-umbr", name: "Oryn-Umbr" },
-          { id: "wep-rivt-ii", name: "Rivt-II" },
-          { id: "wep-rostrum", name: "Rostrum" },
-          { id: "wep-the-royal-tines", name: "The Royal Tines" },
-          { id: "wep-unsula", name: "Unsula" },
-        ],
-      },
       shields: {
         label: "Shields",
         items: [
-          { id: "wep-precklies", name: "Precklies" },
-          { id: "wep-skilter", name: "Skílter" },
-          { id: "wep-thrice-spurns", name: "Thrice Spurns" },
+          { id: "wep-bog-myrtle", name: "Bog & Myrtle" },
+          { id: "wep-oryn-umbr", name: "Oryn-Umbr" },
         ],
       },
       shortBlades: {
         label: "Short Blades",
         items: [
-          { id: "wep-esthelle", name: "Esthelle" },
-          { id: "wep-odiac", name: "Odiac" },
           { id: "wep-cobladh", name: "Cobladh" },
           { id: "wep-grinn", name: "Grinn" },
           { id: "wep-nettle", name: "Nettle" },
+          { id: "wep-rivt-ii", name: "Rivt-II" },
+          { id: "wep-rostrum", name: "Rostrum" },
+          { id: "wep-the-royal-tines", name: "The Royal Tines" },
+          { id: "wep-unsula", name: "Unsula" },
           { id: "wep-virdigris", name: "Virdigris" },
           { id: "wep-witan", name: "Witan" },
         ],
