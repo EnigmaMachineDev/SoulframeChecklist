@@ -2,11 +2,26 @@ import { useState, useEffect, useCallback } from 'react';
 
 const STORAGE_KEY = 'soulframe-checklist-progress';
 
+const DANGEROUS_KEYS = new Set(['__proto__', 'constructor', 'prototype']);
+
+function sanitizeProgress(data) {
+  if (typeof data !== 'object' || data === null || Array.isArray(data)) {
+    return {};
+  }
+  const sanitized = Object.create(null);
+  for (const [key, value] of Object.entries(data)) {
+    if (typeof key === 'string' && value === true && !DANGEROUS_KEYS.has(key)) {
+      sanitized[key] = true;
+    }
+  }
+  return sanitized;
+}
+
 export function useProgress() {
   const [checked, setChecked] = useState(() => {
     try {
       const stored = localStorage.getItem(STORAGE_KEY);
-      return stored ? JSON.parse(stored) : {};
+      return stored ? sanitizeProgress(JSON.parse(stored)) : {};
     } catch {
       return {};
     }
@@ -86,9 +101,12 @@ export function useProgress() {
       reader.onload = (ev) => {
         try {
           const data = JSON.parse(ev.target.result);
-          if (typeof data === 'object' && data !== null) {
-            setChecked(data);
+          const sanitized = sanitizeProgress(data);
+          if (Object.keys(sanitized).length === 0 && ev.target.result.trim() !== '{}') {
+            alert('No valid progress entries found in file.');
+            return;
           }
+          setChecked(sanitized);
         } catch {
           alert('Invalid progress file.');
         }

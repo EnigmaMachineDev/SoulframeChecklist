@@ -9,7 +9,7 @@ function DualCheckItem({ item, isChecked, toggle }) {
   const collected = isChecked(collectedId);
   const leveled = isChecked(leveledId);
   const allDone = collected && leveled;
-  const wikiSlug = item.name.replace(/\s/g, '_').replace(/'/g, '%27').replace(/&/g, '%26');
+  const wikiSlug = encodeURIComponent(item.name).replace(/%20/g, '_');
 
   return (
     <div
@@ -54,7 +54,7 @@ function DualCheckItem({ item, isChecked, toggle }) {
 
 function SingleCheckItem({ item, isChecked, toggle }) {
   const checked = isChecked(item.id);
-  const wikiSlug = item.name.replace(/\s/g, '_').replace(/'/g, '%27').replace(/&/g, '%26');
+  const wikiSlug = encodeURIComponent(item.name).replace(/%20/g, '_');
 
   return (
     <label

@@ -75,6 +75,14 @@ export default function Sidebar({ activeSection, onSectionChange, getCheckedCoun
             Import
           </button>
         </div>
+        <a
+          href="https://buymeacoffee.com/EnigmaMachineDev"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full flex items-center justify-center gap-2 px-3 py-2 text-xs text-sf-muted hover:text-sf-bright hover:bg-sf-hover rounded transition-colors"
+        >
+          ☕ Buy me a coffee
+        </a>
         <button
           onClick={onResetAll}
           className="w-full flex items-center justify-center gap-2 px-3 py-2 text-xs text-sf-muted hover:text-red-400 hover:bg-red-950/20 rounded transition-colors"
