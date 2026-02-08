@@ -15,6 +15,7 @@ export const gameData = {
           { id: "fable-shewolf-snared", name: "The Shewolf Snared" },
           { id: "fable-waste-bear", name: "The Waste Bear" },
           { id: "fable-an-invitation", name: "An Invitation..." },
+          { id: "fable-warsongs", name: "Warsongs" },
         ],
       },
       events: {
@@ -23,7 +24,6 @@ export const gameData = {
           { id: "fable-festival-circade", name: "Festival of the Circade" },
           { id: "fable-bitas-eve", name: "Bita's Eve" },
           { id: "fable-thawtide", name: "Thawtide" },
-          { id: "fable-warsongs", name: "Warsongs" },
         ],
       },
     },
