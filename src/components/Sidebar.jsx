@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, Sword, Shield, Flame, Sparkles, Map, Palette, RotateCcw, Download, Upload } from 'lucide-react';
+import { BookOpen, Sword, Shield, Gem, Flame, Sparkles, Map, Palette, RotateCcw, Download, Upload } from 'lucide-react';
 import { gameData, getSectionItemIds, getTotalItems } from '../data/gameData';
 import ProgressBar from './ProgressBar';
 
@@ -7,6 +7,7 @@ const iconMap = {
   BookOpen,
   Sword,
   Shield,
+  Gem,
   Flame,
   Sparkles,
   Map,
