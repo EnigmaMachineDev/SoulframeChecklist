@@ -18,6 +18,14 @@ export const gameData = {
           { id: "fable-warsongs", name: "Warsongs" },
         ],
       },
+      miniQuests: {
+        label: "Mini-Quests",
+        items: [
+          { id: "fable-mistress-thread", name: "Mistress of The Thread" },
+          { id: "fable-lightning-vial", name: "Lightning in a Vial" },
+          { id: "fable-deadwood", name: "Deadwood" },
+        ],
+      },
       events: {
         label: "Event Fables",
         items: [
@@ -82,6 +90,8 @@ export const gameData = {
           { id: "wep-odiac", name: "Odiac" },
           { id: "wep-the-alder", name: "The Alder" },
           { id: "wep-the-erstroot", name: "The Erstroot" },
+          { id: "wep-baskers-wrest", name: "Basker's Wrest" },
+          { id: "wep-seathorn", name: "Seathorn" },
         ],
       },
       polearms: {
@@ -112,6 +122,7 @@ export const gameData = {
           { id: "wep-unsula", name: "Unsula" },
           { id: "wep-virdigris", name: "Virdigris" },
           { id: "wep-witan", name: "Witan" },
+          { id: "wep-clivers", name: "Clivers" },
         ],
       },
     },
@@ -264,6 +275,14 @@ export const gameData = {
           { id: "arm-wyld-sirin-finery", name: "Wyld Sirin Finery" },
           { id: "arm-wyld-sirin-wevetbelt", name: "Wyld Sirin Wevetbelt" },
           { id: "arm-wyld-sirin-feignmask", name: "Wyld Sirin's Feignmask" },
+        ],
+      },
+      wazzard: {
+        label: "Wazzard Set",
+        items: [
+          { id: "arm-wazzard-robes", name: "Wazzard's Robes" },
+          { id: "arm-wazzard-bycoket", name: "Wazzard's Bycoket" },
+          { id: "arm-wazzard-trunks", name: "Wazzard's Trunks" },
         ],
       },
       wyldTethren: {
