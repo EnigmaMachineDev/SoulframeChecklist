@@ -295,6 +295,44 @@ export const gameData = {
       },
     },
   },
+  virtuePrisms: {
+    label: "Virtue Prisms",
+    icon: "Diamond",
+    categories: {
+      starterPrisms: {
+        label: "Starter Prisms",
+        items: [
+          { id: "prism-iridis-shaman", name: "Iridis' Shaman" },
+          { id: "prism-warrior-mora", name: "Warrior of Mora" },
+          { id: "prism-rogue-saphene", name: "Rogue to Saphene" },
+        ],
+      },
+      hybridPrisms: {
+        label: "Hybrid Prisms",
+        items: [
+          { id: "prism-oros-ranger", name: "Oro's Ranger" },
+          { id: "prism-knight-paladine", name: "Knight O'Paladine" },
+          { id: "prism-verus-assassin", name: "Verus' Assassin" },
+        ],
+      },
+      extremePrisms: {
+        label: "Extreme Prisms",
+        items: [
+          { id: "prism-druid-iridis", name: "Druid of Iridis" },
+          { id: "prism-moras-beast", name: "Mora's Beast" },
+          { id: "prism-saphenes-shadow", name: "Saphene's Shadow" },
+        ],
+      },
+      wyldPrisms: {
+        label: "Wyld Prisms",
+        items: [
+          { id: "prism-wyld-oscelda-witch", name: "Wyld Oscelda's Witch" },
+          { id: "prism-wyld-tethren-braveling", name: "Wyld Tethren's Braveling" },
+          { id: "prism-wyld-sirin-trickster", name: "Wyld Sirin's Trickster" },
+        ],
+      },
+    },
+  },
   accessories: {
     label: "Talismans",
     icon: "Gem",
