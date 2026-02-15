@@ -103,6 +103,7 @@ export default function App() {
         <footer className="max-w-3xl mx-auto mt-12 pt-4 border-t border-sf-border flex flex-wrap gap-4 text-xs text-sf-muted font-sans">
           <Link to="/about" className="hover:text-sf-bright transition-colors">About</Link>
           <Link to="/contact" className="hover:text-sf-bright transition-colors">Contact</Link>
+          <Link to="/privacy-policy" className="hover:text-sf-bright transition-colors">Privacy Policy</Link>
         </footer>
       </main>
 

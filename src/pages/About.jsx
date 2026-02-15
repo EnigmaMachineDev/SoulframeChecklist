@@ -77,6 +77,7 @@ export default function About() {
         <footer className="mt-16 pt-6 border-t border-sf-border flex flex-wrap gap-4 text-xs text-sf-muted font-sans">
           <Link to="/about" className="hover:text-sf-bright transition-colors">About</Link>
           <Link to="/contact" className="hover:text-sf-bright transition-colors">Contact</Link>
+          <Link to="/privacy-policy" className="hover:text-sf-bright transition-colors">Privacy Policy</Link>
         </footer>
       </div>
     </div>
