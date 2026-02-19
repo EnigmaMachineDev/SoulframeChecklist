@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import Sidebar from './components/Sidebar';
@@ -10,6 +10,13 @@ export default function App() {
   const [activeSection, setActiveSection] = useState('fables');
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [showResetConfirm, setShowResetConfirm] = useState(false);
+  const [showRedirect, setShowRedirect] = useState(false);
+
+  useEffect(() => {
+    if (!sessionStorage.getItem('sf-redirect-dismissed')) {
+      setShowRedirect(true);
+    }
+  }, []);
 
   const {
     toggle,
@@ -129,6 +136,31 @@ export default function App() {
                 Reset Everything
               </button>
             </div>
+          </div>
+        </div>
+      )}
+
+      {/* Redirect popup to soulframetools.com */}
+      {showRedirect && (
+        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+          <div className="bg-sf-panel border border-sf-border rounded-xl p-6 max-w-sm mx-4 shadow-2xl text-center">
+            <h3 className="text-lg font-bold text-sf-bright mb-2">This tool has moved!</h3>
+            <p className="text-sf-muted text-sm mb-6">
+              The Soulframe Progress Tracker is now part of <strong className="text-sf-bright">Soulframe Tools</strong>, along with a loadout randomizer, weapon &amp; armour references, and a build planner.
+            </p>
+            <a
+              href="https://soulframetools.com/checklist"
+              className="inline-block px-6 py-2.5 bg-sf-accent hover:bg-sf-green text-sf-bg font-bold rounded-lg text-sm transition-colors mb-3"
+            >
+              Go to Soulframe Tools
+            </a>
+            <br />
+            <button
+              onClick={() => { setShowRedirect(false); sessionStorage.setItem('sf-redirect-dismissed', '1'); }}
+              className="px-4 py-1.5 text-xs text-sf-muted bg-transparent border border-sf-border rounded-lg hover:text-sf-text hover:bg-sf-hover transition-colors"
+            >
+              Stay on this page
+            </button>
           </div>
         </div>
       )}
